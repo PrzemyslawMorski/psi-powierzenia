@@ -1,0 +1,101 @@
+entity Teacher {
+	firstName String,
+	lastName String,
+	email String,
+    hourLimit Integer,
+    pensum Integer,
+    agreedToAdditionalPensum Boolean,
+    type TeacherType
+}
+
+enum TeacherType {
+	EXTERNAL_SPECIALIST,
+    DOCTORATE_STUDENT,
+    ACADEMIC_TEACHER
+}
+
+entity Entrustment {
+	hours Integer,
+    hoursMultiplier Float
+}
+
+entity CourseClass {
+	hours Integer,
+    form ClassFormType
+}
+
+entity Course {
+	name String,
+    code String
+}
+
+entity EducationPlan {
+	startAcademicYear Integer,
+    specialization Specialization,
+    studiesLevel StudiesLevel,
+    studiesType StudiesType
+}
+
+entity EntrustmentPlan {
+	academicYear Integer,
+    semesterType SemesterType
+}
+
+enum StudiesLevel {
+	I, II
+}
+
+enum StudiesType {
+	STATIONARY, NONSTATIONARY
+}
+
+entity FieldOfStudy {
+	name String
+}
+
+enum Specialization {
+	SOFTWARE_DEVELOPMENT, IT_SYSTEMS_DESIGN, DATA_SCIENCE
+}
+
+entity KnowledgeArea {
+	type String
+}
+
+entity ClassForm {
+	type ClassFormType 
+}
+
+enum ClassFormType {
+	LABORATORY, LECTURE, LECTURE_FIELD_OF_STUDY_SPECIFIC,
+    LABORATORY, PROJECT, SEMINAR, EXERCISES, EXCERCISES_LECTORATE, EXERCISES_SPORT
+}
+
+enum SemesterType {
+	SUMMER, WINTER
+}
+
+relationship ManyToOne {
+	EducationPlan to EntrustmentPlan,
+	EducationPlan to Course,
+	EntrustmentPlan to Entrustment,
+	Course to CourseClass,
+    Course to KnowledgeArea,
+	CourseClass to Entrustment,
+	Teacher to Entrustment,
+    Teacher to Course,
+    Teacher to KnowledgeArea,
+    Teacher to ClassForm,
+    EducationPlan to FieldOfStudy
+}
+
+dto all with mapstruct
+service * with serviceImpl
+paginate * with pagination
+
+
+
+
+
+
+
+
