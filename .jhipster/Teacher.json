@@ -1,0 +1,74 @@
+{
+    "name": "Teacher",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hourLimit",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pensum",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "agreedToAdditionalPensum",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "TeacherType",
+            "fieldValues": "EXTERNAL_SPECIALIST,DOCTORATE_STUDENT,ACADEMIC_TEACHER"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "entrustment",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "entrustments",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "course",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "preferedCourses",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "knowledgeArea",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "knowledgeAreas",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "classForm",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "allowedClassForms",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200115182731",
+    "entityTableName": "teacher",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

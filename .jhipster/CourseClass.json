@@ -1,0 +1,33 @@
+{
+    "name": "CourseClass",
+    "fields": [
+        {
+            "fieldName": "hours",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "form",
+            "fieldType": "ClassFormType",
+            "fieldValues": "LABORATORY,LECTURE,LECTURE_FIELD_OF_STUDY_SPECIFIC,PROJECT,SEMINAR,EXERCISES,EXCERCISES_LECTORATE,EXERCISES_SPORT"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "entrustment",
+            "otherEntityRelationshipName": "courseClass",
+            "relationshipName": "entrustments",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200115182733",
+    "entityTableName": "course_class",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

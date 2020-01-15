@@ -1,0 +1,21 @@
+{
+    "name": "KnowledgeArea",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "KnowledgeAreaType",
+            "fieldValues": "DATABASES,DESIGN,AI,LINUX,WINDOWS,JAVA,GIT,ANSIBLE,VAGRANT,RESEARCH,MATHEMATICAL_ANALYSIS,PHYSICS,ALGEBRA"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200115182737",
+    "entityTableName": "knowledge_area",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

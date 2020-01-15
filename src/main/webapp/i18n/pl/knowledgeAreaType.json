@@ -1,0 +1,20 @@
+{
+  "powierzeniaApp": {
+    "KnowledgeAreaType": {
+      "null": "",
+      "DATABASES": "DATABASES",
+      "DESIGN": "DESIGN",
+      "AI": "AI",
+      "LINUX": "LINUX",
+      "WINDOWS": "WINDOWS",
+      "JAVA": "JAVA",
+      "GIT": "GIT",
+      "ANSIBLE": "ANSIBLE",
+      "VAGRANT": "VAGRANT",
+      "RESEARCH": "RESEARCH",
+      "MATHEMATICAL_ANALYSIS": "MATHEMATICAL_ANALYSIS",
+      "PHYSICS": "PHYSICS",
+      "ALGEBRA": "ALGEBRA"
+    }
+  }
+}

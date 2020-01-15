@@ -1,0 +1,24 @@
+{
+    "name": "Entrustment",
+    "fields": [
+        {
+            "fieldName": "hours",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hoursMultiplier",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200115182732",
+    "entityTableName": "entrustment",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

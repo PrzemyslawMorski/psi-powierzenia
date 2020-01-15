@@ -46,6 +46,14 @@ public class CacheConfiguration {
             createCache(cm, edu.psi.powierzenia.domain.User.class.getName(), jcacheConfiguration);
             createCache(cm, edu.psi.powierzenia.domain.Authority.class.getName(), jcacheConfiguration);
             createCache(cm, edu.psi.powierzenia.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            createCache(cm, edu.psi.powierzenia.domain.Teacher.class.getName(), jcacheConfiguration);
+            createCache(cm, edu.psi.powierzenia.domain.Entrustment.class.getName(), jcacheConfiguration);
+            createCache(cm, edu.psi.powierzenia.domain.CourseClass.class.getName(), jcacheConfiguration);
+            createCache(cm, edu.psi.powierzenia.domain.Course.class.getName(), jcacheConfiguration);
+            createCache(cm, edu.psi.powierzenia.domain.EducationPlan.class.getName(), jcacheConfiguration);
+            createCache(cm, edu.psi.powierzenia.domain.EntrustmentPlan.class.getName(), jcacheConfiguration);
+            createCache(cm, edu.psi.powierzenia.domain.KnowledgeArea.class.getName(), jcacheConfiguration);
+            createCache(cm, edu.psi.powierzenia.domain.ClassForm.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }
