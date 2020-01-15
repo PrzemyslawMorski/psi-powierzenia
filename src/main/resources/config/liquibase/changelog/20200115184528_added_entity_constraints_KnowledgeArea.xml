@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity KnowledgeArea.
+    -->
+    <changeSet id="20200115184528-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="course_id"
+                                 baseTableName="knowledge_area"
+                                 constraintName="fk_knowledge_area_course_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="course"/>
+
+        <addForeignKeyConstraint baseColumnNames="teacher_id"
+                                 baseTableName="knowledge_area"
+                                 constraintName="fk_knowledge_area_teacher_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="teacher"/>
+
+    </changeSet>
+</databaseChangeLog>

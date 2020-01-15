@@ -1,0 +1,29 @@
+{
+    "name": "ClassForm",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "ClassFormType",
+            "fieldValues": "LABORATORY,LECTURE,LECTURE_FIELD_OF_STUDY_SPECIFIC,PROJECT,SEMINAR,EXERCISES,EXCERCISES_LECTORATE,EXERCISES_SPORT"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "teacher",
+            "otherEntityRelationshipName": "allowedClassForms",
+            "relationshipName": "teacher",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200115184529",
+    "entityTableName": "class_form",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

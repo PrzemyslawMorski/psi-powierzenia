@@ -1,0 +1,70 @@
+{
+    "name": "Teacher",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hourLimit",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pensum",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "agreedToAdditionalPensum",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "TeacherType",
+            "fieldValues": "EXTERNAL_SPECIALIST,DOCTORATE_STUDENT,ACADEMIC_TEACHER"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "entrustment",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "entrustments"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "course",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "preferedCourses"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "knowledgeArea",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "knowledgeAreas"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "classForm",
+            "otherEntityRelationshipName": "teacher",
+            "relationshipName": "allowedClassForms"
+        }
+    ],
+    "changelogDate": "20200115184521",
+    "entityTableName": "teacher",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,51 @@
+{
+    "name": "Course",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "courseClass",
+            "otherEntityRelationshipName": "course",
+            "relationshipName": "classes"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "knowledgeArea",
+            "otherEntityRelationshipName": "course",
+            "relationshipName": "tags"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "educationPlan",
+            "otherEntityRelationshipName": "courses",
+            "relationshipName": "educationPlan",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "teacher",
+            "otherEntityRelationshipName": "preferedCourses",
+            "relationshipName": "teacher",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200115184524",
+    "entityTableName": "course",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
