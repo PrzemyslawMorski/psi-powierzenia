@@ -35,7 +35,7 @@
     "redux-promise-middleware": "6.1.2",
     "redux-thunk": "2.3.0",
     "tslib": "1.10.0",
-    "uuid": "3.3.3"
+    "uuid": "14.0.0"
   },
   "devDependencies": {
     "@types/enzyme": "3.9.1",
